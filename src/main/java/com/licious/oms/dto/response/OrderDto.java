@@ -28,5 +28,8 @@ public class OrderDto {
     private String phoneNumber;
     private String email;
 
+    private LocalDateTime createdOn;
+    private LocalDateTime updatedOn;
+
     private Set<OrderItemAssociationEntity> orderItems;
 }
