@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: licious-order-management-system
+  profiles:
+    active: ${RUNNING_ENVIRONMENT:local}
+
+
+
+
+
