@@ -4,8 +4,8 @@ services:
   mysql:
     image: mysql:latest
     ports:
-      - "3307:3307"
-      - "33070:33070"
+      - "3306:3306"
+      - "33060:33060"
     environment:
       MYSQL_ROOT_PASSWORD: password
     volumes:
