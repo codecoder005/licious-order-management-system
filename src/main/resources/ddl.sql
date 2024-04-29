@@ -2,11 +2,11 @@ create table items (
                        id binary(16) not null,
                        created_on datetime(6) not null,
                        updated_on datetime(6),
-                       available_stock_units bigint,
+                       available_stock_units bigint not null,
                        description varchar(255),
-                       name varchar(255),
-                       price decimal(38,2),
-                       weight integer,
+                       name varchar(255) not null,
+                       price decimal(38,2) not null,
+                       weight integer not null,
                        primary key (id)
 ) engine=InnoDB;
 
@@ -16,14 +16,13 @@ create table orders (
                         updated_on datetime(6),
                         address_line1 varchar(255) not null,
                         address_line2 varchar(255),
-                        amount decimal(38,2),
+                        amount decimal(38,2) not null,
                         city varchar(255) not null,
                         email varchar(255),
                         phone_number varchar(255) not null,
                         pin_code varchar(255) not null,
-                        placed_on datetime(6) not null,
                         state varchar(255) not null,
-                        status enum ('PLACED','PROCESSING','SHIPPED','DELIVERED','CANCELLED','REFUNDED'),
+                        status enum ('PLACED','PROCESSING','SHIPPED','DELIVERED','CANCELLED','REFUNDED') not null,
                         primary key (id)
 ) engine=InnoDB;
 
